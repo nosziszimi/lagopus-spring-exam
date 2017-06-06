@@ -1,6 +1,7 @@
 package com.greenfox.exam.spring.repository;
 
 import com.greenfox.exam.spring.model.Question;
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -9,4 +10,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface QuestionRepo extends CrudRepository<Question, Long> {
 
+  public List<Question> findTop5ByOrderById();
 }
